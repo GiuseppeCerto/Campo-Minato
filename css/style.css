@@ -64,3 +64,11 @@ body{
     outline: none;
 }
 
+.cell-bomb{
+    background-color: red;
+    -webkit-box-shadow: inset 0px 0px 10px #2a2727;
+    -moz-box-shadow: inset 0px 0px 10px #2a2727;
+    box-shadow: inset 0px 0px 10px #2a2727;
+    outline: none;
+}
+

@@ -34,9 +34,9 @@ bottonStart.addEventListener('click', function () {
 
         const cell = event.target
 
-        cell.classList.add('bg-warning');
+        cell.classList.add('bg-warning')
 
-        cell.classList.add('cell-style');
+        cell.classList.add('cell-style')
 
         cell.removeEventListener('click', cellClicked)
 
@@ -48,7 +48,13 @@ bottonStart.addEventListener('click', function () {
 
         console.log('Numero cella',numberCell)
 
-        console.log(numberCell === bombsBox)
+        cell.innerHTML = `<i class="fa-solid fa-hands-clapping"></i>`
+
+        if(bombsBox.includes(numberCell)){
+            cell.classList.remove('bg-warning')
+            cell.classList.add('cell-bomb')
+            cell.innerHTML = `<i class="fa-solid fa-bomb"></i>`
+        }
     }
 
     console.log(cellElements.length)
@@ -56,6 +62,8 @@ bottonStart.addEventListener('click', function () {
     console.log(cellElements.length / 5)
 
     bombsBox = []
+
+    console.log(bombsBox)
 
     while(bombsBox.length <= (cellElements.length / 5)){
 
