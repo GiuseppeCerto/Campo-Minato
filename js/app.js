@@ -1,77 +1,80 @@
 let bottonStart = document.getElementById('gameStartBtn')
 
-bottonStart.addEventListener('click', function () {
+bottonStart.addEventListener('click', gameMineflid {
 
-    bottonStart.innerHTML = 'Reset'
+    function gameMineflid () {
 
-    let sideNumberOfCells = document.getElementById('levelRange')
+        bottonStart.innerHTML = 'Reset'
 
-    let numberOfCells = sideNumberOfCells.value * sideNumberOfCells.value
+        let sideNumberOfCells = document.getElementById('levelRange')
 
-    const grillElement = document.getElementById('grill')
+        let numberOfCells = sideNumberOfCells.value * sideNumberOfCells.value
 
-    grillElement.innerHTML = ''
-    
-    for (let i = 0; i < numberOfCells; i++) {
+        const grillElement = document.getElementById('grill')
 
-        let numberCycle = i + 1
+        grillElement.innerHTML = ''
+        
+        for (let i = 0; i < numberOfCells; i++) {
 
-        const cellElement = (`<div class="cell" style="width: calc(100% / ${sideNumberOfCells.value}); font-size: 12px;">${numberCycle}</div>`);
+            let numberCycle = i + 1
 
-        grillElement.innerHTML += cellElement
-    }
+            const cellElement = (`<div class="cell" style="width: calc(100% / ${sideNumberOfCells.value}); font-size: 12px;">${numberCycle}</div>`);
 
-    const cellElements = document.querySelectorAll('.cell')
-
-    for (let i = 0; i < cellElements.length; i++) {
-
-        const cell = cellElements[i]
-
-        cell.addEventListener('click', cellClicked)
-    }
-
-    function cellClicked (event){
-
-        const cell = event.target
-
-        cell.classList.add('bg-warning')
-
-        cell.classList.add('cell-style')
-
-        cell.removeEventListener('click', cellClicked)
-
-        console.log(cell.innerHTML)
-
-        let numberCell = parseInt(cell.innerHTML)
-
-        console.log(numberCell)
-
-        console.log('Numero cella',numberCell)
-
-        cell.innerHTML = `<i class="fa-solid fa-hands-clapping"></i>`
-
-        if(bombsBox.includes(numberCell)){
-            cell.classList.remove('bg-warning')
-            cell.classList.add('cell-bomb')
-            cell.innerHTML = `<i class="fa-solid fa-bomb"></i>`
+            grillElement.innerHTML += cellElement
         }
-    }
 
-    console.log(cellElements.length)
+        const cellElements = document.querySelectorAll('.cell')
 
-    console.log(cellElements.length / 5)
+        for (let i = 0; i < cellElements.length; i++) {
 
-    bombsBox = []
+            const cell = cellElements[i]
 
-    console.log(bombsBox)
+            cell.addEventListener('click', cellClicked)
+        }
 
-    while(bombsBox.length <= (cellElements.length / 5)){
+        function cellClicked (event){
 
-        bombs = Math.floor(Math.random() * ((cellElements.length) - 1 + 1) + 1);
+            const cell = event.target
 
-        if(!bombsBox.includes(bombs)){
+            cell.classList.add('bg-warning')
 
-            bombsBox.push(bombs)
+            cell.classList.add('cell-style')
+
+            cell.removeEventListener('click', cellClicked)
+
+            console.log(cell.innerHTML)
+
+            let numberCell = parseInt(cell.innerHTML)
+
+            console.log(numberCell)
+
+            console.log('Numero cella',numberCell)
+
+            cell.innerHTML = `<i class="fa-solid fa-hands-clapping"></i>`
+
+            if(bombsBox.includes(numberCell)){
+                cell.classList.remove('bg-warning')
+                cell.classList.add('cell-bomb')
+                cell.innerHTML = `<i class="fa-solid fa-bomb"></i>`
+            }
+        }
+
+        console.log(cellElements.length)
+
+        console.log(cellElements.length / 5)
+
+        bombsBox = []
+
+        console.log(bombsBox)
+
+        while(bombsBox.length <= (cellElements.length / 5)){
+
+            bombs = Math.floor(Math.random() * ((cellElements.length) - 1 + 1) + 1);
+
+            if(!bombsBox.includes(bombs)){
+
+                bombsBox.push(bombs)
+            }
         }
     }
 })   
