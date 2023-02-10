@@ -7,17 +7,21 @@
 body{
     background-color: gray;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-image: url('../img/camo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .container {
-	max-width: 1000px;
+	max-width: 700px;
 	margin: 0 auto;
 	padding: 50px;
-
+    text-shadow: 3px 3px #3c2424 !important;
 }
 
 .game-setting-section{
-    background-color: rgba(60, 60, 60, 0.2);
+    background-color: rgba(60, 60, 60, 0.6);
+    border: 2px solid yellow;
     border-radius: 5px;
     padding-bottom: 20px;
     margin-top: 20px;
@@ -27,13 +31,15 @@ body{
 }
 
 .bg-game{
-    background-color: rgba(60, 60, 60, 0.5);
+    background-color: rgba(60, 60, 60, 0.9);
     border: 2px solid yellow;
 }
 
 .range{
-    width: 94%;
+    width: 100%;
     align-self: center;
+    text-shadow: 3px 3px #3c2424 !important;
+    colo
 }
 
 #grill {

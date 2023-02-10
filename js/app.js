@@ -18,7 +18,7 @@ function gameMinefield (event) {
 
         let numberCycle = i + 1
 
-        const cellElement = (`<div class="cell" style="width: calc(100% / ${sideNumberOfCells.value}); font-size: 15px;">${numberCycle}</div>`);
+        const cellElement = (`<div class="cell" style="width: calc(100% / ${sideNumberOfCells.value}); font-size: 20px; text-shadow: 0px 0px #3c2424 !important;">${numberCycle}</div>`);
 
         grillElement.innerHTML += cellElement
     }
@@ -44,7 +44,7 @@ function gameMinefield (event) {
 
         let numberCell = parseInt(cell.innerHTML)
 
-        cell.innerHTML = `<i class="fa-solid fa-hands-clapping"></i>`
+        cell.innerHTML = `<i class="fa-solid fa-helmet-un"></i>`
         
 
 
