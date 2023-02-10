@@ -1,0 +1,66 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+    background-color: gray;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.container {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 50px;
+
+}
+
+.game-setting-section{
+    background-color: rgba(60, 60, 60, 0.2);
+    border-radius: 5px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.bg-game{
+    background-color: rgba(60, 60, 60, 0.5);
+    border: 2px solid yellow;
+}
+
+.range{
+    width: 94%;
+    align-self: center;
+}
+
+#grill {
+    display: flex;
+	flex-wrap: wrap;
+    margin-top: 20px;
+    background-color:honeydew;
+}
+
+#grill > * {
+	aspect-ratio: 1;
+    border: 1px solid lightgray;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 14px;
+}
+
+.btn-success{    
+    width: 150px;
+    border: 1px solid yellowgreen;
+}
+
+.cell-style{
+    -webkit-box-shadow: inset 0px 0px 10px #808080;
+    -moz-box-shadow: inset 0px 0px 10px #808080;
+    box-shadow: inset 0px 0px 10px #808080;
+    outline: none;
+}
+
