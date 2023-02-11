@@ -74,9 +74,10 @@ function gameMinefield (event) {
                 const cell = cellElements[i]
 
                 cell.removeEventListener('click', cellClicked)
+
             }
 
-            pointsScore.innerHTML = 'You Lose! Try again'
+            pointsScore.innerHTML = 'You Lose!'
 
         } else if(winStep.length === cellElements.length - bombsBox.length) {
 
@@ -90,21 +91,11 @@ function gameMinefield (event) {
 
             pointsScore.innerHTML = 'You Win! ' + 'Score: ' + points;
         }
-
-        console.log(winStep)
-
-        console.log(cellElements.length - bombsBox.length)
-
-        console.log(bombsBox.length)
-
-        console.log(cellElements.length)
     }
 
     const bombsBox = []
 
-    console.log(bombsBox)
-
-    while(bombsBox.length <= (cellElements.length / 10)){
+    while(bombsBox.length <= (cellElements.length / 15)){
 
         const bombs = Math.floor(Math.random() * ((cellElements.length) - 1 + 1) + 1);
 
