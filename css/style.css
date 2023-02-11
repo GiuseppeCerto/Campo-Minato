@@ -56,7 +56,7 @@ body{
 
 #point-section{
     color: white;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .btn-success{    
@@ -65,9 +65,9 @@ body{
 }
 
 .cell-style{
-    -webkit-box-shadow: inset 0px 0px 10px #808080;
-    -moz-box-shadow: inset 0px 0px 10px #808080;
-    box-shadow: inset 0px 0px 10px #808080;
+    -webkit-box-shadow: inset 0px 0px 10px #2a2727;
+    -moz-box-shadow: inset 0px 0px 10px #2a2727;
+    box-shadow: inset 0px 0px 10px #2a2727;
     outline: none;
 }
 
